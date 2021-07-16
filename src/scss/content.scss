@@ -1,5 +1,133 @@
 .content {
     width: 100vh;
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
-    background: chartreuse;
+    padding: 1rem 4rem;
+
+    & .content__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .header_menu {
+            display: flex;
+            align-items: center;
+
+            :hover {
+                background: #EEEEEC;
+                color: black;
+                cursor: pointer;
+            }
+
+            button {
+                padding: 3px 10px;
+                display: flex;
+                align-items: center;
+                background: transparent;
+                border-radius: 0.3rem;
+                border-style: none;
+                color: #B2B1AE;
+
+                span {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    & .content__main {
+        display: flex;
+        align-items: flex-start;
+
+        & .main__items {
+            display: flex;
+            padding: 10px 10px;
+            width: 280px;
+            border-radius: 5px;
+            margin-right: 18px;
+            flex-direction: column;
+
+            & .item__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 2px;
+
+                & .counter {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    span {
+                        margin-left: 10px;
+                        font-size: 14px;
+                        color: #B2B1AE;
+                    }
+                }
+                   
+                button {
+                    display: flex;
+                    align-items: center;
+                    background: transparent;
+                    border-style: none;                 
+                    color: #B2B1AE;
+    
+                    span {
+                        margin-left: 5px;
+                    }
+
+                    :hover {
+                        background: #EEEEEC;
+                        border-radius: 0.3rem;
+                        color: black;
+                        cursor: pointer;
+                    }
+                }
+            }    
+
+            // &:hover {
+            //     border: 1px solid #EEEEEC;
+            // }
+
+            & .item__tasks {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                & .task {
+                    width: 100%;
+                    border-radius: 0.3rem;
+                    border: 1px solid #EEEEEC;
+                    padding: 10px 15px;
+                    margin-bottom: 12px;
+                }
+            }
+            
+            & .add__items {
+                display: flex;
+                width: 100vh;
+                justify-content: space-between;
+                align-items: center;
+
+                button {
+                    padding: 3px 10px;
+                    display: flex;
+                    align-items: center;
+                    background: transparent;
+                    border-style: none;
+                    color: #B2B1AE;
+    
+                    span {
+                        margin-left: 5px;
+                    }
+
+                    &:hover {
+                        color: red;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
 }
