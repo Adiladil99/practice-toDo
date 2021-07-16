@@ -1,0 +1,18 @@
+@import "variables";
+@import "mixins";
+
+@import "nav";
+
+.todo__content {
+    position: relative;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-grow: 0;
+
+    @import "nav";
+    @import "content";
+}

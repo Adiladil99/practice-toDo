@@ -1,0 +1,30 @@
+.nav {    
+    width: 17%;
+    height: 100vh;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    justify-content: flex-start;
+    align-items: center;
+
+    & .nav__items {
+        margin-top: 10px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 7px 10px;
+        border-radius: 0.3rem;
+        width: 90%;
+
+        p {
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        &:hover {
+            background: #ececec;
+            cursor: pointer;
+        }
+    }
+}

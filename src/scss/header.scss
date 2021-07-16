@@ -1,0 +1,61 @@
+@import "variables";
+@import "mixins";
+
+.todo__header {
+    position: relative;
+    background: #5284DB;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: $header-height;
+    padding: 7px 50px;
+    display: flex;
+    justify-content: space-between;
+
+    & .leftblock {
+        display: flex;
+
+        & .search {
+            padding: 0.2rem;
+            border-radius: 0.3rem;
+            background: white;
+            opacity: 20%;
+            margin-left: 5px;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            i {
+                align-self: flex-end;
+                color: black;
+            }
+
+            input {
+                background: transparent;
+                border: none;
+                outline:none;
+                width: 90%;
+            }
+        }
+
+        & .button {
+            margin-left: 5px;
+            @include button(red);
+        }
+    }
+
+    & .rightblock {
+        display: flex;
+        
+        & .button {
+            margin-right: 10px;
+            @include button(red);
+        }
+    }
+
+}
