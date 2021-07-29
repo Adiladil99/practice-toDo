@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 .todo__nav {    
     background: #fafafa;
     display: flex;
@@ -8,21 +11,10 @@
 
     & .nav__items {
         margin-top: 10px;
-        display: flex;
-        justify-content: start;
-        align-items: center;
         padding: 7px 13px;
-        border-radius: 0.3rem;
+        font-size: 14px;
         width: 90%;
-
-        p {
-            margin-left: 10px;
-            font-size: 14px;
-        }
-
-        &:hover {
-            background: #ececec;
-            cursor: pointer;
-        }
+        height: 40px;
+        @include button_text(black, #ececec, black);
     }
 }

@@ -1,0 +1,40 @@
+<div class="main__items">
+            <div class="item__header">
+                <div class="counter">
+                    <h3>Title</h3>
+                    <span>0</span>
+                </div>                                
+                <button class="header_menu_buttons">
+                    <i class="material-icons">more_horiz</i>
+                </button>
+            </div>
+
+            <div class="item__tasks">
+                <div class="task">
+                    <div><i class="material-icons">done</i></div>
+                    <div>
+                        <span>Title</span>
+                        <p>Title</p>
+                        <p>Завтра</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add__items">
+                <button class="header_menu_buttons" data-button_add="add">
+                    <i class="material-icons">add</i>
+                    <span>Добавить задачу</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="add__tasks">
+            <p>Добавить раздел</p>
+        </div>
+
+        <div class="end__add">
+            <button class="end__add__button">
+                <i class="material-icons">add</i>
+                <span>Добавить раздел</span>
+            </button>
+        </div>

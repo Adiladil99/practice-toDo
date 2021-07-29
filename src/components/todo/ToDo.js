@@ -1,12 +1,13 @@
 import {$} from '@core/dom'
 
 export class ToDo {
-    constructor(options) {
+    constructor(selector, options) {
+        this.$el = $(selector)
         this.components = options.components || []
     }
 
     getRoot() {
-        const $root = $.create('div', 'todo')
+        const $root = $.create('div', 'container')
 
         this.components = this.components.map(Component => {
             const $el = $.create(Component.tagName, Component.className)

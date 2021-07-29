@@ -36,19 +36,19 @@
     }
     }
 
-      #pageHeader {
+      .todo__header {
         grid-area: header;
         }
-      #mainNav {
+      .todo__nav {
         grid-area: nav;
         }
-      #mainTitle { 
+      .todo__mainTitle { 
         grid-area: title;      
         }
-      #mainContent { 
+      .todo__content { 
         grid-area: content; 
         }
-      #pageFooter { 
+      .todo__footer { 
         grid-area: footer; 
         }
     

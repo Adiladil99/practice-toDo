@@ -22,6 +22,30 @@
     }
 }
 
+@mixin button_text($color: green, $hoverBack: #EEEEEC, $hoverColor: red) {
+    display: flex;
+    color: $color;
+    justify-content: start;
+    align-items: center;
+    border-radius: 0.3rem;
+    border-style: none;
+    background: transparent;
+
+    span {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        background: $hoverBack;
+        cursor: pointer;
+        color: $hoverColor;
+    }
+
+    // &:active, &.active {
+    //     background: $color;
+    // }
+}
+
 @mixin clear-list() {
     list-style: none;
     margin: 0;

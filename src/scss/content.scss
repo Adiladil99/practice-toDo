@@ -26,6 +26,7 @@
             &:hover {
                 opacity: 1;
                 cursor: pointer;
+                transition: 0.4s;
             }
         }
 
@@ -33,30 +34,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px 20px;
+            padding: 5px 0px;
             border-radius: 5px;
             margin-right: 10px;
             margin-left: 10px;
+            border: 0;
 
             & .end__add__button {
-                display: flex;
-                border: 0;
+                @include button_text(black, #fafafa, red);
                 width: 280px;
                 background: #fafafa;
-                align-items: center;
                 padding: 5px 10px;
-
-                &:hover {
-                    color: red;
-                    cursor: pointer;
-
-                }
             }
         }
 
         & .main__items {
             display: flex;
-            padding: 0px 10px;
+            padding: 10px 10px;
             width: 310px;
             border-radius: 5px;
             margin-right: 10px;
@@ -80,23 +74,8 @@
                     }
                 }
                    
-                button {
-                    display: flex;
-                    align-items: center;
-                    background: transparent;
-                    border-style: none;                 
-                    color: #B2B1AE;
-    
-                    span {
-                        margin-left: 5px;
-                    }
-
-                    :hover {
-                        background: #EEEEEC;
-                        border-radius: 0.3rem;
-                        color: black;
-                        cursor: pointer;
-                    }
+                button {         
+                    @include button_text(#B2B1AE, #EEEEEC, black);
                 }
             }    
 
@@ -113,13 +92,22 @@
                     width: 310px;
                     border-radius: 0.3rem;
                     border: 1px solid #EEEEEC;
-                    padding: 10px 0px;
-                    min-height: 35px;
+                    min-height: 45px;
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     margin-bottom: 12px;
+                    padding-top: 10px;
+
+                    div {
+                        padding: 0px 10px;
+                    }
                 }
-            }
+                & .task:hover {
+                    cursor: pointer;
+                    box-shadow: -4px -4px 4px #EEEEEC, 4px 4px 4px #EEEEEC;
+                    transition: 0.4s;
+                }
+            }            
             
             & .add__items {
                 display: flex;
@@ -127,22 +115,24 @@
                 align-items: center;
 
                 button {
-                    padding: 3px 10px;
-                    display: flex;
-                    align-items: center;
-                    background: transparent;
-                    border-style: none;
-                    color: #B2B1AE;
-    
-                    span {
-                        margin-left: 5px;
+                    @include button_text(#B2B1AE ,white, red);
+
+                    i {
+                        font-size: 20px;
                     }
 
                     &:hover {
-                        color: red;
-                        cursor: pointer;
+                        i {
+                            background: red;
+                            color: white;
+                            border-radius: 20px;
+                        }
                     }
                 }
             }
-        }
+        }   
+        & .main__items:hover {
+            box-shadow: -2px -2px 2px #EEEEEC, 2px 2px 2px #EEEEEC;
+            transition: 0.4s;
+        }     
     }

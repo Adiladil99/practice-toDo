@@ -1,4 +1,5 @@
 import {ToDoComponent} from '@core/ToDoComponent'
+import {createTitle} from './title.template'
 
 export class Title extends ToDoComponent {
     static className = 'todo__mainTitle'
@@ -12,28 +13,11 @@ export class Title extends ToDoComponent {
         })
     }
 
+    get template() {
+        return createTitle(this.state)
+    }
+
     toHTML() {
-        return `
-        <div class="title">
-            <h1>Менеджер задач</h1>
-        </div>
-        <div class="header_menu">
-            <button class="header_menu_buttons">
-                <i class="material-icons">comment</i>
-                <span>Комментарий</span>
-            </button>
-            <button class="header_menu_buttons">
-                <i class="material-icons">person_add</i>
-                <span>Общий доступ</span>
-            </button>
-            <button class="header_menu_buttons">
-                <i class="material-icons">sort</i>
-                <span>Сортировать</span>
-            </button>
-            <button class="header_menu_buttons">
-                <i class="material-icons">more_horiz</i>
-            </button>
-        </div>
-        `
+        return this.template
     }
 }

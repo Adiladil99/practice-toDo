@@ -11,24 +11,9 @@
         display: flex;
         align-items: center;
 
-        :hover {
-            background: #EEEEEC;
-            color: black;
-            cursor: pointer;
-        }
-
         button {
             padding: 3px 10px;
-            display: flex;
-            align-items: center;
-            background: transparent;
-            border-radius: 0.3rem;
-            border-style: none;
-            color: #B2B1AE;
-
-            span {
-                margin-left: 5px;
-            }
+            @include button_text(#B2B1AE ,#ececec, black);
         }
     }
 }
