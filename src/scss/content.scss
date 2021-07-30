@@ -134,5 +134,40 @@
         & .main__items:hover {
             box-shadow: -2px -2px 2px #EEEEEC, 2px 2px 2px #EEEEEC;
             transition: 0.4s;
-        }     
-    }
+        }   
+        
+        & .firstBoard {
+            display: flex;
+            font-size: 14px;
+            width: 250px;
+            flex-direction: column;
+
+            input {
+                height: 10px;
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid black;
+            }
+
+            div {
+                display: flex;
+                justify-content: flex-start;
+                padding: 10px 0;
+
+                button {
+                    padding: 10px 10px;
+                    @include button_text(#B2B1AE, #EEEEEC, black);
+                }          
+                
+                .add {
+                    @include button_text(white, $primary-color, white);
+                    background: $primary-color;
+                    opacity: 0.5;
+                }
+
+                .d {
+                    opacity: 1;
+                }
+            }
+        }
+}

@@ -2,7 +2,7 @@
 @import "mixins";
 
 .todo__header {
-    background: #5284DB;
+    background: $primary-color;
     padding: 7px 30px;
     display: flex;
     justify-content: space-between;

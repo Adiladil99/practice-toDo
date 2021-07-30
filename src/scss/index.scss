@@ -38,19 +38,19 @@
 
       .todo__header {
         grid-area: header;
-        }
+      }
       .todo__nav {
         grid-area: nav;
-        }
+      }
       .todo__mainTitle { 
         grid-area: title;      
-        }
+      }
       .todo__content { 
         grid-area: content; 
-        }
+      }
       .todo__footer { 
         grid-area: footer; 
-        }
+      }
     
     @import "header";
     @import "nav";
