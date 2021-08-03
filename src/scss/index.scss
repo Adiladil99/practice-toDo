@@ -1,22 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import "~normalize.css";
 
-@import "header";
-@import "body";
-@import "footer";
+@import "variables";
+@import "mixins";
 // @import "toolbar";
 // @import "formula";
 // @import "table";
 // @import "dashboard";
 // @import "loader";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+.container {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        display: grid;
+        grid-template-areas: 
+          "header header"
+          "nav title"
+          "nav content"
+          "footer footer";
+        grid-template-rows: $header-height 80px 1fr 70px;  
+        grid-template-columns: 17% 1fr;
+        height: 100vh;
+        margin: 0;
 
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    /* Stack the layout on small devices/viewports. */
+    @media all and (max-width: 575px) {
+    .container { 
+        grid-template-areas: 
+        "header"
+        "title"
+        "content"
+        "footer";
+        grid-template-rows: 80px 70px 1fr 70px;  
+        grid-template-columns: 1fr;
+    }
+    }
+
+      .todo__header {
+        grid-area: header;
+      }
+      .todo__nav {
+        grid-area: nav;
+      }
+      .todo__mainTitle { 
+        grid-area: title;      
+      }
+      .todo__content { 
+        grid-area: content; 
+      }
+      .todo__footer { 
+        grid-area: footer; 
+      }
+    
+    @import "header";
+    @import "nav";
+    @import "title";
+    @import "content";
+    @import "footer";
 }

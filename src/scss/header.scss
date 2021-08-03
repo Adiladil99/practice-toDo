@@ -2,13 +2,8 @@
 @import "mixins";
 
 .todo__header {
-    position: relative;
-    background: #5284DB;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: $header-height;
-    padding: 7px 50px;
+    background: $primary-color;
+    padding: 7px 30px;
     display: flex;
     justify-content: space-between;
 
@@ -27,7 +22,7 @@
             align-items: stretch;
 
             &:hover {
-                opacity: 1;
+                opacity: 0.99;
             }
 
             i {

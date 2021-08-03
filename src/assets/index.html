@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>ToDo</title>
+</head>
+<body>
+    
+    <div id="app" class="container">
+
+            <header class="todo__header" id="pageHeader">
+
+                <div class="leftblock">
+                    <div class="button">
+                        <i class="material-icons">menu</i>
+                    </div>
+                    <div class="button">
+                        <i class="material-icons">home</i>
+                    </div>
+                    <div class="search">
+                        <i class="material-icons">search</i>
+                        <input type="text" class="input" size="40" placeholder="Поиск">
+                    </div>
+                </div>
+
+                <div class="rightblock">
+
+                    <div class="button">
+                        <i class="material-icons">add</i>
+                    </div>
+                    <div class="button">
+                        <i class="material-icons">notifications_none</i>
+                    </div>
+                    <div class="button">
+                        <i class="material-icons">settings</i>
+                    </div>
+                    <div class="button">
+                        <i class="material-icons">account_circle</i>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <nav class="todo__nav" id="mainNav">
+
+                    <div class="nav__items">
+                        <i class="material-icons">event_note</i>
+                        <p>Заметки</p>
+                    </div>
+                    <div class="nav__items">
+                        <i class="material-icons">today</i>
+                        <p>Календарь</p>
+                    </div>
+                    <div class="nav__items">
+                        <i class="material-icons">filter_none</i>
+                        <p>Менеджер задач</p>
+                    </div>
+                    <div class="nav__items">
+                        <i class="material-icons">bookmark_border</i>
+                        <p>Дневник</p>
+                    </div>
+                    <div class="nav__items">
+                        <i class="material-icons">colorize</i>
+                        <p>Рисовалка</p>
+                    </div>
+
+            </nav>
+    
+            <div class="todo__mainTitle" id="mainTitle">
+                <div class="title">
+                    <h1>Менеджер задач</h1>
+                </div>
+                <div class="header_menu">
+                    <button class="header_menu_buttons">
+                        <i class="material-icons">comment</i>
+                        <span>Комментарий</span>
+                    </button>
+                    <button class="header_menu_buttons">
+                        <i class="material-icons">person_add</i>
+                        <span>Общий доступ</span>
+                    </button>
+                    <button class="header_menu_buttons">
+                        <i class="material-icons">sort</i>
+                        <span>Сортировать</span>
+                    </button>
+                    <button class="header_menu_buttons">
+                        <i class="material-icons">more_horiz</i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="todo__content" id="mainContent">
+                <div class="main__items">
+                    <div class="item__header">
+                        <div class="counter">
+                            <h3>Title</h3>
+                            <span>0</span>
+                        </div>                                
+                        <button class="header_menu_buttons">
+                            <i class="material-icons">more_horiz</i>
+                        </button>
+                    </div>
+
+                    <div class="item__tasks">
+                        <div class="task">1</div>
+                        <div class="task">2</div>
+                        <div class="task">3</div>
+                    </div>
+
+                    <div class="add__items">
+                        <button class="header_menu_buttons">
+                            <i class="material-icons">add</i>
+                            <span>Добавить задачу</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add__tasks">
+                    <p>Добавить раздел</p>
+                </div>
+
+                <div class="main__items">
+                    <div class="item__header">
+                        <div class="counter">
+                            <h3>Title</h3>
+                            <span>0</span>
+                        </div>                                
+                        <button class="header_menu_buttons">
+                            <i class="material-icons">more_horiz</i>
+                        </button>
+                    </div>
+
+                    <div class="item__tasks">
+                        <div class="task">1</div>
+                        <div class="task">2</div>
+                        <div class="task">3</div>
+                    </div>
+
+                    <div class="add__items">
+                        <button class="header_menu_buttons">
+                            <i class="material-icons">add</i>
+                            <span>Добавить задачу</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="end__add">
+                    <button class="end__add__button">
+                        <i class="material-icons">add</i>
+                        <span>Добавить раздел</span>
+                    </button>
+                </div>
+
+            </div>
+    
+            <footer class="todo__footer" id="pageFooter">      
+
+            </footer>     
+            
+    </div>
+
+</body>
+</html>

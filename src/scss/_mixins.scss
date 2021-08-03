@@ -1,5 +1,5 @@
 @mixin button($color: green) {
-    height: 30px;
+    height: 25px;
     min-width: 30px;
     padding: 3px;
     text-align: center;
@@ -20,6 +20,26 @@
         background: #DB715D;
         cursor: pointer;
     }
+}
+
+@mixin button_text($color: green, $hoverBack: #EEEEEC, $hoverColor: red) {
+    display: flex;
+    color: $color;
+    justify-content: start;
+    align-items: center;
+    border-radius: 0.3rem;
+    border-style: none;
+    background: transparent;
+    
+    &:hover {
+        background: $hoverBack;
+        cursor: pointer;
+        color: $hoverColor;
+    }
+
+    // &:active, &.active {
+    //     background: $color;
+    // }
 }
 
 @mixin clear-list() {

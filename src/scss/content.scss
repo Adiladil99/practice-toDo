@@ -1,5 +1,234 @@
-.content {
-    width: 100vh;
-    flex-grow: 1;
-    background: chartreuse;
+.todo__content {
+        display: flex;
+        padding: 0 40px;
+        align-items: flex-start;
+
+        & .add__tasks {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 1px;
+            margin: 0 7px;
+            background: red;
+            opacity: 0;
+
+            & p {
+                color: red;
+                padding: 5px;
+                font-size: 14px;
+                text-align: center;
+                white-space: nowrap;
+                background: white;
+            }
+            
+            &:hover {
+                opacity: 1;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+        }
+
+        & .end__add {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 0px;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border: 0;
+
+            & .end__add__button {
+                @include button_text(black, #fafafa, red);
+                width: 280px;
+                background: #fafafa;
+                padding: 5px 10px;
+            }
+        }
+
+        & .main__items {
+            display: flex;
+            padding: 10px 10px;
+            width: 310px;
+            border-radius: 5px;
+            flex-direction: column;
+
+            & .item__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & .counter {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    span {
+                        margin-left: 10px;
+                        font-size: 14px;
+                        color: #B2B1AE;
+                    }
+                }
+                   
+                button {         
+                    @include button_text(#B2B1AE, #EEEEEC, black);
+                }
+            }    
+
+            // &:hover {
+            //     border: 1px solid #EEEEEC;
+            // }
+
+            & .item__tasks {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                & .task {
+                    width: 310px;
+                    border-radius: 0.3rem;
+                    border: 1px solid #EEEEEC;
+                    min-height: 45px;
+                    display: flex;
+                    align-items: flex-start;
+                    margin-bottom: 12px;
+                    padding-top: 20px;
+
+                    .circle {
+                        margin: 0 10px;
+                        border-radius: 10px;
+                        width: 15px;
+                        background: white;
+                        height: 15px;
+                        border: 1px solid black;
+                    }
+                    
+                    div {
+                        width: 85%;
+                    }
+                   
+                    button {      
+                        margin-right: 5px;   
+                        @include button_text(#B2B1AE, #EEEEEC, black);
+                    }
+                }
+                & .task:hover {
+                    cursor: pointer;
+                    box-shadow: -4px -4px 4px #EEEEEC, 4px 4px 4px #EEEEEC;
+                    transition: 0.4s;
+                }
+            }            
+            
+            & .add__items {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                button {
+                    @include button_text(#B2B1AE ,white, red);
+
+                    i {
+                        font-size: 20px;
+                    }
+
+                    &:hover {
+                        i {
+                            background: red;
+                            color: white;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+        }   
+        & .main__items:hover {
+            box-shadow: -2px -2px 2px #EEEEEC, 2px 2px 2px #EEEEEC;
+            transition: 0.4s;
+        }   
+        
+        & .firstBoard{
+            display: flex;
+            font-size: 14px;
+            margin: 10px 10px;
+            width: 250px;
+            flex-direction: column;
+
+            input {
+                height: 10px;
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid black;
+            }
+
+            div {
+                display: flex;
+                justify-content: flex-start;
+                padding: 10px 0;
+
+                button {
+                    padding: 10px 10px;
+                    @include button_text(#B2B1AE, #EEEEEC, black);
+                }          
+                
+                .add {
+                    @include button_text(white, $primary-color, white);
+                    background: $primary-color;
+                    opacity: 0.5;
+                }
+
+                .d {
+                    opacity: 1;
+                }
+            }
+        }
+
+        & .addTask {
+            display: flex;
+            font-size: 14px;
+            width: 100%;
+            flex-direction: column;
+
+            .input_in {
+                max-width: 100%;
+                padding: 5px 5px;
+                margin: 5px 10px;
+                max-height: 70px;
+                resize: none;
+                border: none;
+
+                &:hover {
+                    border: none;    
+                }
+            }
+
+            .inputText {
+                border-radius: 5px;
+                margin-bottom: 10px;
+                border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 10px 0px;
+            }
+
+            .buttonn {
+                display: flex;
+
+                button {
+                    padding: 7px 7px;
+                    @include button_text(#B2B1AE, #EEEEEC, black);
+                }          
+                
+                .add {
+                    @include button_text(white, $primary-color, white);
+                    background: $primary-color;
+                    opacity: 0.5;
+                }
+                
+                .d {
+                    opacity: 1;
+                }
+            }
+        }
 }

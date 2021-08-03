@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+
+.todo__mainTitle {
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    justify-content: space-between;
+
+    & .header_menu {
+        display: flex;
+        align-items: center;
+
+        button {
+            padding: 3px 10px;
+            @include button_text(#B2B1AE ,#ececec, black);
+        }
+    }
+}
