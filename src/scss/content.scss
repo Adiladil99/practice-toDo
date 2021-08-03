@@ -9,8 +9,7 @@
             justify-content: center;
             height: 100vh;
             width: 1px;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin: 0 7px;
             background: red;
             opacity: 0;
 
@@ -26,7 +25,7 @@
             &:hover {
                 opacity: 1;
                 cursor: pointer;
-                transition: 0.4s;
+                transition: 0.2s;
             }
         }
 
@@ -53,8 +52,6 @@
             padding: 10px 10px;
             width: 310px;
             border-radius: 5px;
-            margin-right: 10px;
-            margin-left: 10px;
             flex-direction: column;
 
             & .item__header {
@@ -96,10 +93,24 @@
                     display: flex;
                     align-items: flex-start;
                     margin-bottom: 12px;
-                    padding-top: 10px;
+                    padding-top: 20px;
 
+                    .circle {
+                        margin: 0 10px;
+                        border-radius: 10px;
+                        width: 15px;
+                        background: white;
+                        height: 15px;
+                        border: 1px solid black;
+                    }
+                    
                     div {
-                        padding: 0px 10px;
+                        width: 85%;
+                    }
+                   
+                    button {      
+                        margin-right: 5px;   
+                        @include button_text(#B2B1AE, #EEEEEC, black);
                     }
                 }
                 & .task:hover {
@@ -136,9 +147,10 @@
             transition: 0.4s;
         }   
         
-        & .firstBoard {
+        & .firstBoard{
             display: flex;
             font-size: 14px;
+            margin: 10px 10px;
             width: 250px;
             flex-direction: column;
 
@@ -165,6 +177,55 @@
                     opacity: 0.5;
                 }
 
+                .d {
+                    opacity: 1;
+                }
+            }
+        }
+
+        & .addTask {
+            display: flex;
+            font-size: 14px;
+            width: 100%;
+            flex-direction: column;
+
+            .input_in {
+                max-width: 100%;
+                padding: 5px 5px;
+                margin: 5px 10px;
+                max-height: 70px;
+                resize: none;
+                border: none;
+
+                &:hover {
+                    border: none;    
+                }
+            }
+
+            .inputText {
+                border-radius: 5px;
+                margin-bottom: 10px;
+                border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 10px 0px;
+            }
+
+            .buttonn {
+                display: flex;
+
+                button {
+                    padding: 7px 7px;
+                    @include button_text(#B2B1AE, #EEEEEC, black);
+                }          
+                
+                .add {
+                    @include button_text(white, $primary-color, white);
+                    background: $primary-color;
+                    opacity: 0.5;
+                }
+                
                 .d {
                     opacity: 1;
                 }

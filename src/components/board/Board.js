@@ -1,5 +1,5 @@
 import {ToDoComponent} from '@core/ToDoComponent'
-import {createBoard, createSection, createTasks} from './board.template'
+import {addTasks, createBoard, createSection, createTasks} from './board.template'
 import {$} from '@core/dom'
 import {createFirstBoard} from './firstBoard.template'
 
@@ -16,7 +16,7 @@ export class Board extends ToDoComponent {
     }
 
     get template() {
-        return createFirstBoard(this.state)
+        return createFirstBoard(this.state, 'razdel')
     }
 
     toHTML() {
@@ -24,9 +24,8 @@ export class Board extends ToDoComponent {
     }
 
     onInput(event) {
-        const title = document.querySelector('[data-title="title"]').value
-        const button = document.querySelector('[data-button_add="razdel"]')
-        console.log(button)
+        const title = document.querySelector(`[data-title="title"]`).value
+        const button = document.querySelector('#butAdd')
         if (title !== '') {
             button.removeAttribute('disabled')
             button.classList.add('d')
@@ -39,26 +38,38 @@ export class Board extends ToDoComponent {
     onClick(event) {
         const $target = $(event.target)
         const $but = $target.data.button_add
+        const $id = $target.data.id || $target.data.addid
 
         if ($but === 'razdel') {
             const els = document.querySelector('[data-block="firstBoard"]')
             const title = document.querySelector('[data-title="title"]').value
-            title !== '' ? console.log('no') : console.log('yes')
             els.remove()
             const els1 = document.querySelector('.todo__content')
             els1.innerHTML = createBoard(title)
         } else if ($but === 'addTask') {
-            const tasks = document.querySelector('[data-block="tasks"]')
-            console.log($but)
-            tasks.insertAdjacentHTML('beforeend', createTasks())            
+            document.querySelectorAll('.add__items').forEach(item => item.style.display = 'none')
+            const tasks = document.querySelector(`[data-block-id="${$id}"]`)
+            tasks.insertAdjacentHTML('beforeend', addTasks())
+            const headerCount = document.querySelector(`[data-count="${$id}"]`)
+            headerCount.innerHTML = tasks.childElementCount  
         } else if ($but === 'addSection') {
             const elem = document.querySelector('#end')
-            console.log(elem)
-            elem.insertAdjacentHTML('beforebegin', createSection())            
-        } else if ($but === 'addSectionS') {
-            const els = document.querySelector('[data-button_add="addSectionS"]')
-            console.log(els)
-            els.insertAdjacentHTML('beforebegin', createSection())            
+            elem.insertAdjacentHTML('beforebegin', createFirstBoard(this.state, 'thisRazdel'))            
+        } else if ($but === 'sectionS') {
+            const els = document.querySelector(`[data-addId="${$id}"]`)
+            els.insertAdjacentHTML('beforebegin', createFirstBoard(this.state, 'thisRazdel'))            
+        } else if ($but === 'thisRazdel') {
+            const $parent = $target.closest(`[data-id="${$id}"]`)
+            const text = document.querySelector(`[data-title-id="${$id}"]`).value
+            $parent.$el.insertAdjacentHTML('beforebegin', createSection(text))     
+            $parent.$el.remove()
+        } else if ($but === 'insertTask') {
+            document.querySelectorAll('.add__items').forEach(item => item.style.display = 'flex')
+            const $parent = $target.closest(`[data-tasksnum="${$id}"]`)
+            const title = document.querySelector(`[data-title="title"]`).value
+            const description = document.querySelector(`[data-title="description"]`).value
+            $parent.$el.insertAdjacentHTML('beforebegin', createTasks(title, description))     
+            $parent.$el.remove()
         }
     }
 }

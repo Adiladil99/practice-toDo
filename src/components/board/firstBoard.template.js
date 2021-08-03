@@ -1,15 +1,15 @@
-function board() {
+function board(type, id) {
     return `
-        <div class="firstBoard" data-block="firstBoard">
-            <input placeholder="Название раздела" data-title="title"></input>
+        <div class="firstBoard" data-block="firstBoard" data-id="${id}">
+            <input placeholder="Название раздела" data-title="title" data-title-id="${id}"></input>
             <div>
-                <button class="add" data-button_add="razdel" disabled>Добавить раздел</button>
+                <button class="add" id="butAdd" data-button_add="${type}" disabled>Добавить раздел</button>
                 <button>Отмена</button>
             </div>
         </div>
     `
 }
 
-export function createFirstBoard(s) {
-    return board()
+export function createFirstBoard(s, type, id) {
+    return board(type, id)
 }
