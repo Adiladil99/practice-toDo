@@ -18,7 +18,7 @@
           "nav title"
           "nav content"
           "footer footer";
-        grid-template-rows: $header-height 80px 1fr 70px;  
+        grid-template-rows: $header-height 80px 1fr;  
         grid-template-columns: 17% 1fr;
         height: 100vh;
         margin: 0;

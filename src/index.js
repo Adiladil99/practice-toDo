@@ -4,10 +4,9 @@ import {Header} from '@/components/header/Header'
 import {Nav} from '@/components/nav/Nav'
 import {Title} from '@/components/title/Title'
 import {Board} from '@/components/board/Board'
-import {Footer} from '@/components/footer/Footer'
 
 const todo = new ToDo('body', {
-  components: [Header, Nav, Title, Board, Footer]
+  components: [Header, Nav, Title, Board]
 })
 
 todo.render()

@@ -34,7 +34,7 @@ function board(title, now) {
 
 function task(now, title, description) {
     return `
-                <div class="task" data-tasksnum=${now}>
+                <div class="task" data-type="taskdrag"  draggable="true" data-tasksnum=${now}>
                     <button class="circle"></button>
                     <div>
                         <span>${title}</span>

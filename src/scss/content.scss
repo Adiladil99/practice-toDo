@@ -1,7 +1,14 @@
 .todo__content {
         display: flex;
-        padding: 0 40px;
+        padding: 1px 40px;
+        padding-bottom: 40px;
         align-items: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+        & > div {
+            flex: 0 0 auto;
+        }
 
         & .add__tasks {
             display: flex;
@@ -118,7 +125,23 @@
                     box-shadow: -4px -4px 4px #EEEEEC, 4px 4px 4px #EEEEEC;
                     transition: 0.4s;
                 }
-            }            
+
+                & .hold {
+                    border: 2px solid #EBB582;
+                    opacity: 0.9;
+                }
+                  
+                & .hide {
+                    display: none;
+                }
+            }
+            
+            & .hovered{
+                border-top: 2px solid #EB8A3E;
+                box-shadow: 4px 4px 9px #EB8A3E;
+                border-radius: 10px;
+                transition: .5s;
+            }
             
             & .add__items {
                 display: flex;
